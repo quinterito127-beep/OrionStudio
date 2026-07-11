@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* ===================================== */
+/* Variables Globales */
+/* ===================================== */
+
+:root {
+
+  --font-family: "Inter", sans-serif;
+
+  --color-primary: #111111;
+  --color-secondary: #4A90E2;
+
+  --color-background: #ffffff;
+  --color-surface: #f7f7f7;
+
+  --color-text: #111111;
+  --color-text-light: #666666;
+
+  --color-border: #e9e9e9;
+
+  --shadow-sm: 0 5px 15px rgba(0, 0, 0, .06);
+  --shadow-md: 0 12px 30px rgba(0, 0, 0, .10);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, .14);
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-pill: 999px;
+
+  --transition: .3s ease;
+
+  --container: 1280px;
+
+  --section-padding: clamp(70px, 8vw, 130px);
+
+}
+
+/* ===================================== */
+/* Reset */
+/* ===================================== */
+
+*,
+*::before,
+*::after {
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+}
+
+html {
+
+  scroll-behavior: smooth;
+
+}
+
+body {
+
+  font-family: var(--font-family);
+
+  background: var(--color-background);
+
+  color: var(--color-text);
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+
+  text-rendering: optimizeLegibility;
+
+}
+
+img,
+picture {
+
+  display: block;
+
+  max-width: 100%;
+
+  user-select: none;
+
+}
+
+button,
+input,
+textarea,
+select {
+
+  font: inherit;
+
+}
+
+button {
+
+  cursor: pointer;
+
+  border: none;
+
+  background: transparent;
+
+}
+
+a {
+
+  text-decoration: none;
+
+  color: inherit;
+
+}
+
+ul {
+
+  list-style: none;
+
+}
+
+section {
+
+  width: 100%;
+
+  padding: var(--section-padding) 8%;
+
+}
+
+/* ===================================== */
+/* Tipografía fluida */
+/* ===================================== */
+
+h1 {
+
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+
+  line-height: 1.05;
+
+}
+
+h2 {
+
+  font-size: clamp(2rem, 4vw, 3.4rem);
+
+}
+
+h3 {
+
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+
+}
+
+p,
+span,
+button,
+a {
+
+  font-size: clamp(.95rem, 1vw, 1rem);
+
+}
+
+/* ===================================== */
+/* Contenedor */
+/* ===================================== */
+
+.container {
+
+  width: min(100%, var(--container));
+
+  margin-inline: auto;
+
+}
+
+/* ===================================== */
+/* Accesibilidad */
+/* ===================================== */
+
+:focus-visible {
+
+  outline: 3px solid var(--color-secondary);
+
+  outline-offset: 4px;
+
+  border-radius: 8px;
+
+}
+
+::selection {
+
+  background: var(--color-primary);
+
+  color: white;
+
+}
+
+/* ===================================== */
+/* Scrollbar */
+/* ===================================== */
+
+::-webkit-scrollbar {
+
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+  background: #cfcfcf;
+
+  border-radius: 999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+  background: #999;
+
+}
+
+/* ===================================== */
+/* Reduce Motion */
+/* ===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  * {
+
+    animation: none !important;
+
+    transition: none !important;
+
+    scroll-behavior: auto !important;
+
+  }
+
+}
+
+/* ===================================== */
+/* Responsive */
+/* ===================================== */
+
+@media (max-width:1200px) {
+
+  section {
+
+    padding: 100px 6%;
+
+  }
+
+}
+
+@media (max-width:992px) {
+
+  section {
+
+    padding: 90px 5%;
+
+  }
+
+}
+
+@media (max-width:768px) {
+
+  section {
+
+    padding: 80px 24px;
+
+  }
+
+}
+
+@media (max-width:480px) {
+
+  section {
+
+    padding: 70px 18px;
+
+  }
+
+}

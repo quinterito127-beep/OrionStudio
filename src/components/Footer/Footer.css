@@ -1,0 +1,367 @@
+.footer {
+
+    position: relative;
+    overflow: hidden;
+
+    padding: clamp(70px, 10vw, 90px) 8% 40px;
+
+    background: #0F1117;
+    color: white;
+
+}
+
+/* ========================= */
+/* Background Glow */
+/* ========================= */
+
+.footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -250px;
+    right: -150px;
+
+    border-radius: 50%;
+
+    background: #5B7CFF;
+
+    opacity: .08;
+
+    filter: blur(140px);
+
+    pointer-events: none;
+
+}
+
+/* ========================= */
+/* Top */
+/* ========================= */
+
+.footer-top {
+
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 2fr;
+
+    gap: 80px;
+
+    align-items: start;
+
+    margin-bottom: 70px;
+
+}
+
+/* ========================= */
+/* Brand */
+/* ========================= */
+
+.footer-brand img {
+
+    width: 72px;
+
+    height: auto;
+
+    margin-bottom: 20px;
+
+}
+
+.footer-brand h2 {
+
+    font-size: clamp(2rem, 5vw, 2.5rem);
+
+    margin-bottom: 20px;
+
+}
+
+.footer-brand p {
+
+    max-width: 430px;
+
+    color: #A9AFBA;
+
+    line-height: 1.9;
+
+    font-size: 16px;
+
+}
+
+/* ========================= */
+/* Links */
+/* ========================= */
+
+.footer-links {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+
+}
+
+.footer-links h4 {
+
+    margin-bottom: 22px;
+
+    font-size: 18px;
+
+    color: white;
+
+}
+
+.footer-links a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #A9AFBA;
+
+    margin-bottom: 16px;
+
+    transition: all .3s ease;
+
+}
+
+.footer-links a:hover {
+
+    color: white;
+
+    transform: translateX(5px);
+
+}
+
+.footer-links svg {
+
+    color: #5B7CFF;
+
+    font-size: 18px;
+
+}
+
+/* ========================= */
+/* Bottom */
+/* ========================= */
+
+.footer-bottom {
+
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, .08);
+
+    padding-top: 30px;
+
+}
+
+.footer-bottom span {
+
+    color: #8E96A5;
+
+    font-size: 15px;
+
+}
+
+.footer-bottom button {
+
+    width: 55px;
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #5B7CFF;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    transition: all .35s ease;
+
+}
+
+.footer-bottom button:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 20px 35px rgba(91, 124, 255, .35);
+
+}
+
+/* ========================= */
+/* Accessibility */
+/* ========================= */
+
+.footer a:focus-visible,
+.footer button:focus-visible {
+
+    outline: 3px solid #5B7CFF;
+
+    outline-offset: 4px;
+
+}
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media (max-width:992px) {
+
+    .footer {
+
+        padding: 80px 6% 35px;
+
+    }
+
+    .footer-top {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+    }
+
+    .footer-links {
+
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media (max-width:768px) {
+
+    .footer {
+
+        padding: 70px 24px 30px;
+
+    }
+
+    .footer-top {
+
+        gap: 50px;
+
+    }
+
+    .footer-brand {
+
+        text-align: center;
+
+    }
+
+    .footer-brand img {
+
+        margin: auto auto 20px;
+
+    }
+
+    .footer-brand p {
+
+        margin: auto;
+
+    }
+
+    .footer-links {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        text-align: center;
+
+    }
+
+    .footer-links a {
+
+        justify-content: center;
+
+    }
+
+    .footer-bottom {
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        text-align: center;
+
+    }
+
+}
+
+/* ========================= */
+/* Small Phones */
+/* ========================= */
+
+@media (max-width:480px) {
+
+    .footer {
+
+        padding: 60px 18px 25px;
+
+    }
+
+    .footer-brand img {
+
+        width: 60px;
+
+    }
+
+    .footer-brand h2 {
+
+        font-size: 30px;
+
+    }
+
+    .footer-brand p {
+
+        font-size: 15px;
+
+    }
+
+    .footer-bottom span {
+
+        font-size: 14px;
+
+    }
+
+    .footer-bottom button {
+
+        width: 48px;
+        height: 48px;
+
+        font-size: 16px;
+
+    }
+
+}

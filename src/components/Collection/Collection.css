@@ -1,0 +1,331 @@
+.collection {
+
+    padding: clamp(80px, 10vw, 160px) 8%;
+
+    background: #fff;
+
+}
+
+.collection-header {
+
+    max-width: 700px;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+
+}
+
+.collection-header p {
+
+    color: #666;
+
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+
+}
+
+.collection-header h2 {
+
+    font-size: clamp(2.3rem, 5vw, 3.3rem);
+
+    color: #111;
+
+    margin-bottom: 20px;
+
+    line-height: 1.1;
+
+}
+
+.collection-header span {
+
+    color: #666;
+
+    line-height: 1.8;
+
+    font-size: clamp(.95rem, 1vw, 1.05rem);
+
+}
+
+/* ====================== */
+
+.collection-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px;
+
+}
+
+/* ====================== */
+
+.collection-card {
+
+    background: white;
+
+    border-radius: 28px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    min-height: 520px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.collection-card:hover {
+
+    transform: translateY(-12px);
+
+    box-shadow: 0 35px 70px rgba(0, 0, 0, .18);
+
+}
+
+/* ====================== */
+
+.collection-image-wrapper {
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 28px;
+
+}
+
+.collection-glow {
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    filter: blur(70px);
+
+    opacity: .30;
+
+    transition: .4s;
+
+}
+
+.collection-card:hover .collection-glow {
+
+    opacity: .55;
+
+    transform: scale(1.15);
+
+}
+
+.collection-image {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 260px;
+
+    transition: transform .4s;
+
+}
+
+.collection-card:hover .collection-image {
+
+    transform: scale(1.08) rotate(-6deg);
+
+}
+
+/* ====================== */
+
+.collection-subtitle {
+
+    margin-top: 18px;
+
+    color: #777;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+.collection-card h3 {
+
+    margin: 14px 0;
+
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+
+}
+
+.collection-price {
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    margin-bottom: 26px;
+
+}
+
+.collection-card button {
+
+    width: 100%;
+
+    max-width: 220px;
+
+    padding: 15px;
+
+    border-radius: 999px;
+
+    color: white;
+
+    font-weight: 600;
+
+    font-size: 15px;
+
+    transition: .3s;
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .15);
+
+}
+
+.collection-card button:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 20px 35px rgba(0, 0, 0, .22);
+
+}
+
+/* ====================== */
+/* Laptop */
+/* ====================== */
+
+@media (max-width:1200px) {
+
+    .collection-grid {
+
+        gap: 26px;
+
+    }
+
+}
+
+/* ====================== */
+/* Tablet */
+/* ====================== */
+
+@media(max-width:992px) {
+
+    .collection-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+/* ====================== */
+/* Mobile */
+/* ====================== */
+
+@media(max-width:768px) {
+
+    .collection {
+
+        padding: 90px 24px;
+
+    }
+
+    .collection-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+    }
+
+    .collection-card {
+
+        min-height: auto;
+
+        padding: 28px;
+
+    }
+
+    .collection-image {
+
+        max-width: 220px;
+
+    }
+
+    .collection-glow {
+
+        width: 150px;
+
+        height: 150px;
+
+    }
+
+}
+
+/* ====================== */
+/* Small Phones */
+/* ====================== */
+
+@media(max-width:480px) {
+
+    .collection {
+
+        padding: 80px 18px;
+
+    }
+
+    .collection-card {
+
+        padding: 24px;
+
+    }
+
+    .collection-image {
+
+        max-width: 190px;
+
+    }
+
+    .collection-card button {
+
+        max-width: 100%;
+
+    }
+
+}
